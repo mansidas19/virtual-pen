@@ -28,13 +28,14 @@ def nothing(x):
     pass
 
 cap = cv2.VideoCapture(0)
+#set size of window
 cap.set(3,1280)
 cap.set(4,720)
 
 cv2.namedWindow("Trackbars")
 
 # Now create 6 trackbars that will control the lower and upper range of 
-# H,S and V channels. The Arguments are like this: Name of trackbar, 
+# H-hue,S-saturation and V-value channels. The Arguments are like this: Name of trackbar, 
 # window name, range,callback function. For Hue the range is 0-179 and
 # for S,V its 0-255.
 cv2.createTrackbar("L - H", "Trackbars", 0, 179, nothing)
@@ -47,6 +48,7 @@ cv2.createTrackbar("U - V", "Trackbars", 255, 255, nothing)
  
 while True:
     ret, frame = cap.read()
+    #ret stores status and frame stores the image captured
     if not ret:
         break
     # Convert the BGR image to HSV image.
