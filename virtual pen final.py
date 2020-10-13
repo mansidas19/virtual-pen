@@ -1,29 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import time
-
-
-# In[2]:
-
-
 import cv2
-
-
-# In[3]:
-
-
 import numpy as np
-
-
-# In[6]:
-
 
 #STEP 1: FINDING COLOR RANGE OF TARGET PEN AND SAVE IT
 
+#if no action then just pass
 def nothing(x):
     pass
 
@@ -99,9 +84,6 @@ cap.release()
 cv2.destroyAllWindows()
 
 
-# In[11]:
-
-
 #STEP 2:GETTING RID OF EXTRA NOISE IN BACKGROUND AND FOCUSING ON MAIN OBJECT
 
 # This variable determines if we want to load color range from memory  
@@ -162,10 +144,6 @@ while(1):
 
 cv2.destroyAllWindows()
 cap.release()
-
-
-# In[13]:
-
 
 #STEP 3: TRACKING THE TARGET PEN
 
@@ -233,9 +211,6 @@ while(1):
 
 cv2.destroyAllWindows()
 cap.release()
-
-
-# In[14]:
 
 
 #STEP 4:FINALLY WRITING WITH VIRTUAL PEN
@@ -329,13 +304,12 @@ cv2.destroyAllWindows()
 cap.release()
 
 
-# In[9]:
 
 
 
 
 
-# In[ ]:
+
 
 
 
